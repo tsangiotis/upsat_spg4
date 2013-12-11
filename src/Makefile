@@ -8,7 +8,7 @@ CDEFINES=-O2 -DMACRO_SINCOS
 # CFLAGS=-Wall -DLINUX $(CDEFINES)
 # XLIBS=
 
-# -- CygWin
+# -- NonLinux
 CC=gcc
 CFLAGS=-Wall $(CDEFINES)
 RANLIB=ranlib
@@ -18,16 +18,9 @@ RM=rm -f
 AR=ar cr
 RANLIB=ranlib
 DEPFLAGS=-I/usr/include
-# SRCDIR=./src/
-
-# -- create space variable
-comma:= ,
-empty:=
-space:= $(empty) $(empty)
 
 SRCS=aries.c deep.c ferror.c satutl.c sgdp4.c test1.c
 
-# OBJS=$(SRCDIR)$(subst  $(space),$(space)$(SRCDIR),${SRCS:.c=.o})
 OBJS=${SRCS:.c=.o}
 
 LIB=-lm $(XLIBS)
@@ -42,12 +35,11 @@ compvec: comp.c
 
 test:
 	$(RM) ./test_?.txt
-	cp ../data/twoline.txt ./twoline.txt
+	cp ../data/twoline.txt twoline.txt
 	cp ../data/ssd_b.txt ssd.txt
-	./testsgp > ../data/test_b.txt
-	./compvec ../data/test_b.txt test_example.txt 0 > diff.txt
-
-    # ./testsgp -i catalog_3l_2006_06_26_pm.txt > /dev/null
+	./testsgp > ../result/test_b.txt
+	./compvec ../data/test_b.txt ../data/test_example.txt 0 > ../result/diff.txt
+	$(RM) ssd.txt twoline.txt
 
 clean:
 	$(RM) core $(OBJS)
