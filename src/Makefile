@@ -45,7 +45,7 @@ clean:
 	$(RM) core $(OBJS)
 
 cleanall:
-	$(RM) core $(OBJS) *.OBJ *.BAK *.exe *.bak
+	$(RM) core $(OBJS) testsgp compvec ../result/diff.txt ../result/test_b.txt *.OBJ *.BAK *.exe *.bak
 
 .c.o:
 	$(CC) $(CFLAGS) $(DEPFLAGS) -c $*.c
