@@ -10,3 +10,9 @@ Private bitbucket.org repository:
 __11/12/2013:__
 
 - Fixed structure and Makefiles to make it less cluttered and compilable again.
+
+__24/12/2013__
+
+- Show my name and university heads. 
+- Started getting rid of deep space routines.
+- Errors and misc stuff shows UPSat.

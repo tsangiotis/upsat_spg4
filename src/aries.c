@@ -2,6 +2,7 @@
  *
  *	(c) Tasos Sagiotis 2013-2014
  *	University of Patras
+ *	tsagiotis (at) gmail.com
  *
  *	Released under the terms of the GNU LGPL V3
  *	http://www.gnu.org/licenses/lgpl-3.0.html
