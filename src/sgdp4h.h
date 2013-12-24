@@ -1,21 +1,17 @@
 /* > sgdp4h.h
  *
  *
- *	(c) Paul Crawford & Andrew Brooks 1994-2010
- *	University of Dundee
- *	psc (at) sat.dundee.ac.uk
- *	arb (at) sat.dundee.ac.uk
+ *	(c) Tasos Sagiotis 2013
+ *	University of Patras
+ *	tsagi (at) gmail.com
  *
  *	Released under the terms of the GNU LGPL V3
  *	http://www.gnu.org/licenses/lgpl-3.0.html
- *	
+ *
  *	This software is distributed in the hope that it will be useful,
  *	but WITHOUT ANY WARRANTY; without even the implied warranty of
  *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *	GNU General Public License for more details.
- *
- *
- * 2.00 psc Sun May 28 1995 - Modifed for non-Dundee use.
  *
  */
 

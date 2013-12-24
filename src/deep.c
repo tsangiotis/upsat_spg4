@@ -1,52 +1,17 @@
 /* > deep.c
  *
- * 1.00 around 1980 - Felix R. Hoots & Ronald L. Roehrich, from original
- *                    DEEP.FOR used in the SGP deep-space models SDP4
- *                    and SDP8.
- *
- ************************************************************************
- *
- *     Made famous by the spacetrack report No.3:
- *     "Models for Propogation of NORAD Element Sets"
- *     Edited and subsequently distributed by Dr. T. S. Kelso.
- *
- ************************************************************************
- *
- *	This conversion by:
- *
- *	(c) Paul Crawford & Andrew Brooks 1994-2010
- *	University of Dundee
- *	psc (at) sat.dundee.ac.uk
- *	arb (at) sat.dundee.ac.uk
+ *	(c) Tasos Sagiotis 2013-2014
+ *	University of Patras
+ *	tsagiotis (at) gmail.com
  *
  *	Released under the terms of the GNU LGPL V3
  *	http://www.gnu.org/licenses/lgpl-3.0.html
- *	
+ *
  *	This software is distributed in the hope that it will be useful,
  *	but WITHOUT ANY WARRANTY; without even the implied warranty of
  *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *	GNU General Public License for more details.
  *
- ************************************************************************
- *
- * 2.00 psc Mon Dec 19 1994 - Translated from FORTRAN into 'C' (of sorts).
- *
- * 2.01 psc Wed Dec 21 1994 - Re-write of the secular integrator from a
- *                            messy FORTRAN block in to something which
- *                            (hopefully!) is understandable.
- *
- * 2.02 psc Thu Dec 22 1994 - Final mods and tested against the FORTRAN
- *                            version (using ~12 hour resonant and
- *                            geostationary (~24 hour) elements).
- *
- * 2.03 psc Mon Jan 02 1995 - Some additional refinements and error-traps.
- *
- * 3.00 psc Mon May 29 1995 - Cleaned up for general use & distrabution (to
- *                            remove Dundee specific features).
- *
- * 3.01 psc Mon Jan 12 2004 - Final fix agreed for "Lyddane bug".
- * 3.02 psc Mon Jul 03 2006 - Extended range "Lyddane bug" fix.
- * 3.03 psc Tue Jul 04 2006 - Bug fix for extended range "Lyddane bug" fix.
  */
 
 #include <math.h>

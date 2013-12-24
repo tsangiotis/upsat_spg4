@@ -12,10 +12,9 @@
  ************************************************************************
  *
  *	This conversion by:
- *	(c) Paul Crawford & Andrew Brooks 1994-2010
- *	University of Dundee
- *	psc (at) sat.dundee.ac.uk
- *	arb (at) sat.dundee.ac.uk
+ *	(c) Tasos Sagiotis 2013-2014
+ *	University of Patras
+ *	tsagiotis (at) gmail.com
  *
  *	Released under the terms of the GNU LGPL V3
  *	http://www.gnu.org/licenses/lgpl-3.0.html
@@ -25,41 +24,7 @@
  *	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *	GNU General Public License for more details.
  *
- ************************************************************************
- *
- * 1.07 arb     Oct    1994 - Transcribed by arb Oct 1994 into 'C', then
- *                            modified to fit Dundee systems by psc.
- *
- * 1.08 psc Mon Nov  7 1994 - replaced original satpos.c with SGP4 model.
- *
- * 1.09 psc Wed Nov  9 1994 - Corrected a few minor translation errors after
- *                            testing with example two-line elements.
- *
- * 1.10 psc Mon Nov 21 1994 - A few optimising tweeks.
- *
- * 1.11 psc Wed Nov 30 1994 - No longer uses eloset() and minor error in the
- *                            SGP4 code corrected.
- *
- * 2.00 psc Tue Dec 13 1994 - arb discovered the archive.afit.af.mil FTP site
- *                            with the original FORTRAN code in machine form.
- *                            Tidied up and added support for the SDP4 model.
- *
- * 2.01 psc Fri Dec 23 1994 - Tested out the combined SGP4/SDP4 code against
- *                            the original FORTRAN versions.
- *
- * 2.02 psc Mon Jan 02 1995 - Few more tweeks and tidied up the
- *                            doccumentation for more general use.
- *
- * 3.00 psc Mon May 29 1995 - Cleaned up for general use & distrabution (to
- *                            remove Dundee specific features).
- *
- * 3.01 psc Mon Jan 12 2004 - Minor bug fix for day calculation.
- *
- * 3.02 psc Mon Jul 10 2006 - Added if(rk < (real)1.0) test for sub-orbital decay.
- *
- * 3.03 psc Sat Aug 05 2006 - Added trap for divide-by-zero when calculating xlcof.
- *
- */
+ ************************************************************************/
 
 static const char SCCSid[] = "@(#)sgdp4.c       3.03 (C) 1995 psc SatLib: Orbital Model";
 
@@ -71,6 +36,7 @@ static const char SCCSid[] = "@(#)sgdp4.c       3.03 (C) 1995 psc SatLib: Orbita
 
 #include "sgdp4h.h"
 
+#define NO_DEEP_SPACE 1/* Our satelite is not in deep space so we disable this feature. */
 #define ECC_ZERO		((real)0.0)		/* Zero eccentricity case ? */
 #define ECC_ALL			((real)1.0e-4)	/* For all drag terms in GSFC case. */
 #define ECC_EPS			((real)1.0e-6)	/* Too low for computing further drops. */
