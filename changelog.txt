@@ -1,0 +1,13 @@
+11/12/2013:
+
+- Fixed structure and Makefiles to make it less cluttered and compilable again.
+
+24/12/2013
+
+- Show my name and university heads. 
+- Started getting rid of deep space routines.
+- Errors and misc stuff shows UPSat.
+
+25/12/2013
+
+- Now throws a fatal error when Deep Space orbit is set from "twoline.txt",
