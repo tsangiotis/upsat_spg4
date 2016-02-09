@@ -3,7 +3,7 @@ static const char SCCSid[] = "@(#)test.c        1.00 (C) 2013  psc sgdp4 demo - 
 #include "sgdp4h.h"
 // #include <getopt.h>
 /**
- * Created by tsagi on 10/12/13.
+ * Created by tsangiotis on 10/12/13.
  */
 
 #include <unistd.h>

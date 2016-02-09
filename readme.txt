@@ -3,7 +3,7 @@ SGP4/SDP4 orbit propagator for UP-Sat.
 Originaly from http://www.sat.dundee.ac.uk/~psc/sgp4.html
 
 Private bitbucket.org repository:
-https://bitbucket.org/tsagi/upsat_spg4/
+https://bitbucket.org/tsangiotis/upsat_spg4/
 
 (c) Tasos Sagiotis 2013-2014
 University of Patras
